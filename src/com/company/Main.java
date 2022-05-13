@@ -1,7 +1,9 @@
 package com.company;
 
-import static com.company.QuickSelect.quickSelectIterative;
-import static com.company.QuickSelect.quickSelectRecursive;
+import java.util.Arrays;
+
+import static com.company.QuickSelect.*;
+import static com.company.QuickSort.quickSort;
 
 /**
  *	Quickselect is a selection algorithm to find the kth smallest element in an
@@ -20,12 +22,12 @@ import static com.company.QuickSelect.quickSelectRecursive;
 public class Main {
     public static void main(String[] args) {
         int[] array = {9, 8, 7, 6, 5, 0, 1, 2, 3, 4};
-        for(int i = 0; i < array.length; i++) {
-            System.out.print(quickSelectIterative(array, i)+" ");
-        }
-        System.out.println();
-        for(int i = 0; i < array.length; i++) {
-            System.out.print(quickSelectRecursive(array, i)+" ");
-        }
+        quickSelectSort(array);
+        System.out.println(Arrays.toString(array));
+
+
+        int[] array1 = {9, 8, 7, 6, 5, 0, 1, 2, 3, 4};
+        quickSort(array1);
+        System.out.println(Arrays.toString(array1));
     }
 }
