@@ -1,20 +1,19 @@
 package com.company;
 
 public class QuickSelect {
-    public static int[] quickSelectSort(int[] array){
+    public static void quickSelectSort(int[] array){
         for(int i = 0; i < array.length; i++) {
             quickSelectIterative(array, i);
         }
-        return array;
     }
 
     public static void quickSelectIterative(int[] array, int n) {
         quickSelectIterativeHelper(array, 0, array.length - 1, n);
     }
 
-    private static int quickSelectIterativeHelper(int[] array, int left, int right, int n) {
+    private static void quickSelectIterativeHelper(int[] array, int left, int right, int n) {
         if(left == right) {
-            return array[left];
+            return;
         }
 
         while(true) {
@@ -22,7 +21,7 @@ public class QuickSelect {
             pivotIndex = partition(array, left, right, pivotIndex);
 
             if(n == pivotIndex) {
-                return array[n];
+                return;
             } else if(n < pivotIndex) {
                 right = pivotIndex - 1;
             } else {

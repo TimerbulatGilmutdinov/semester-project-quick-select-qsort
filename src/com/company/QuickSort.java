@@ -2,9 +2,8 @@ package com.company;
 
 public class QuickSort {
 
-    public static int[] quickSort(int[] array){
+    public static void quickSort(int[] array){
         quickSort(array,0,array.length-1);
-        return array;
     }
 
     public static void quickSort(int[] arr, int start, int end) {
