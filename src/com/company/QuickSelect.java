@@ -2,9 +2,9 @@ package com.company;
 
 public class QuickSelect {
     public static void quickSelectSort(int[] array){
-        for(int i = 0; i < array.length; i++) {
-            quickSelectIterative(array, i);
-        }
+
+            quickSelectIterative(array, array.length/2);
+
     }
 
     public static void quickSelectIterative(int[] array, int n) {
